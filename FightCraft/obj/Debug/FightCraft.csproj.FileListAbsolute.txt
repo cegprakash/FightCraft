@@ -1,0 +1,9 @@
+c:\users\dpraka\documents\visual studio 2015\Projects\FightCraft\FightCraft\bin\Debug\FightCraft.exe.config
+c:\users\dpraka\documents\visual studio 2015\Projects\FightCraft\FightCraft\bin\Debug\FightCraft.exe
+c:\users\dpraka\documents\visual studio 2015\Projects\FightCraft\FightCraft\bin\Debug\FightCraft.pdb
+c:\users\dpraka\documents\visual studio 2015\Projects\FightCraft\FightCraft\obj\Debug\FightCraft.csprojResolveAssemblyReference.cache
+c:\users\dpraka\documents\visual studio 2015\Projects\FightCraft\FightCraft\obj\Debug\FightCraft.Properties.Resources.resources
+c:\users\dpraka\documents\visual studio 2015\Projects\FightCraft\FightCraft\obj\Debug\FightCraft.csproj.GenerateResource.Cache
+c:\users\dpraka\documents\visual studio 2015\Projects\FightCraft\FightCraft\obj\Debug\FightCraft.exe
+c:\users\dpraka\documents\visual studio 2015\Projects\FightCraft\FightCraft\obj\Debug\FightCraft.pdb
+c:\users\dpraka\documents\visual studio 2015\Projects\FightCraft\FightCraft\obj\Debug\FightCraft.MenuForm.resources
