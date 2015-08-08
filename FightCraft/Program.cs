@@ -16,7 +16,8 @@ namespace FightCraft
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuForm());
+            MenuForm menuForm = new MenuForm();
+            Application.Run(menuForm);
         }
     }
 }
