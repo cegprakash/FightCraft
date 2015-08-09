@@ -15,14 +15,12 @@ namespace FightCraft
     public partial class GameScreen : Form
     {
         int level;
-        bool isMyTurn;
         static Hero myHero, enemyHero;
         GameConstants constants = new GameConstants();
         Random random = new Random();
         public GameScreen()
         {
             level = 1;
-            isMyTurn = true;
             InitializeComponent();
             initLevel(level);
             initMyTurn();
@@ -75,6 +73,14 @@ namespace FightCraft
             EnemyArmorBar.Value = (int)Math.Floor((enemyHero.currentState.armor / enemyHero.attributes.armor) * 100);
             EnemyDamageBar.Value = (int)Math.Floor((enemyHero.currentState.damagePerHit / enemyHero.attributes.damagePerHit) * 100);
             EnemyManaBar.Value = (int)Math.Floor((enemyHero.currentState.mana / enemyHero.attributes.mana) * 100);
+            MyHealthLabel.Text = MyHealthBar.Value.ToString();
+            MyArmorLabel.Text = MyArmorBar.Value.ToString();
+            MyDamageLabel.Text = MyDamageBar.Value.ToString();
+            MyManaLabel.Text = MyManaBar.Value.ToString();
+            EnemyHealthLabel.Text = EnemyHealthBar.Value.ToString();
+            EnemyArmorLabel.Text = EnemyArmorBar.Value.ToString();
+            EnemyDamageLabel.Text = EnemyDamageBar.Value.ToString();
+            EnemyManaLabel.Text = EnemyManaBar.Value.ToString();
         }
 
         public void initMyTurn()
@@ -123,7 +129,6 @@ namespace FightCraft
             }
             else
             {
-                isMyTurn = false;
                 initEnemyTurn();
                 play_enemy_AI();
             }
@@ -150,7 +155,6 @@ namespace FightCraft
             }
             else
             {
-                isMyTurn = false;
                 initEnemyTurn();
                 play_enemy_AI();
             }
@@ -180,7 +184,6 @@ namespace FightCraft
             }
             else
             {
-                isMyTurn = true;
                 initMyTurn();
             }
 

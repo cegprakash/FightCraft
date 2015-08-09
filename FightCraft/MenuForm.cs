@@ -42,7 +42,7 @@ namespace FightCraft
             if (e.CloseReason == CloseReason.WindowsShutDown) return;
 
             // Confirm user wants to close
-            switch (MessageBox.Show(this, "Are you sure you want to close?", "Closing", MessageBoxButtons.YesNo))
+            switch (MessageBox.Show(this, "Are you sure you want to quit?", "Closing", MessageBoxButtons.YesNo))
             {
                 case DialogResult.No:
                     e.Cancel = true;
@@ -50,6 +50,11 @@ namespace FightCraft
                 default:
                     break;
             }
+        }
+
+        private void QuitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

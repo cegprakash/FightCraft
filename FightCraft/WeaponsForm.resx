@@ -215,9 +215,6 @@
         CX/jtY51bDZnzv8Bxn9eyq/4zUUAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="ShopToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="BuyHealButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6
@@ -892,9 +889,6 @@
         tJvBtyw248+fwGiQanqsxWKpWYyd9RW0/QF3kz9h+nuLxbIrEIH/ByJD5ZYqaI5TAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="ShopToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="BuyWeaponUltraButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAoAAAAJoCAYAAAD22lDMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -2152,9 +2146,6 @@
         BEEQBEGQHwNE9SiGsL6vadOmI0T5e7hixYpC8Htabvgj5U+r1Sr+By8KiVq8odzNAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="ShopToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="BuyArmorBasicButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -3437,7 +3428,24 @@
         1KQm3R0yPmxSk5p0d8j4sElNatLdIPlf/x9bJoYdYsWSFAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="ShopToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="BackButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAANASURBVHhe7dRLagMxFEXB3pmX7qUl7YAmBuNfO1g6VfAGmmh2zwYAAAAAAAAAAAAAAAAAAP/i
+        vN/Pfqe/F5Axxj9OBCDievwiABG3xj9OBGBR98Y/TgRgMY+Of5wIwCKeHf84EYDJvTr+cSIAk3p3/ONE
+        ACZz1PjHiQBM4ujxjwO+3KfGf/kX+GLGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HG
+        D1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HG
+        D1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HG
+        D1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HG
+        D1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HG
+        D1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD1HGD2ECAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEi
+        AHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEi
+        AHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEi
+        AHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEi
+        AHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEi
+        AHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHEiAHGfigAwiaMjcNoPmMhRETB+mNS7ETB+
+        mNyrETB+WMSzETB+WMyjETB+WNS9CBg/LO5WBIwfIq4jYPwQMyJg/AAAAAAAAAAAAAAAAADAMrbtF0ko
+        EADmA2AEAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

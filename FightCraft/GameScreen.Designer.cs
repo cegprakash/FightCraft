@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameScreen));
             this.GameConsole = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,6 +54,15 @@
             this.ShopButton = new System.Windows.Forms.Button();
             this.GoldImage = new System.Windows.Forms.PictureBox();
             this.MyGold = new System.Windows.Forms.Label();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.MyHealthLabel = new System.Windows.Forms.Label();
+            this.MyManaLabel = new System.Windows.Forms.Label();
+            this.MyArmorLabel = new System.Windows.Forms.Label();
+            this.MyDamageLabel = new System.Windows.Forms.Label();
+            this.EnemyHealthLabel = new System.Windows.Forms.Label();
+            this.EnemyManaLabel = new System.Windows.Forms.Label();
+            this.EnemyArmorLabel = new System.Windows.Forms.Label();
+            this.EnemyDamageLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.EnemyHeroImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyHeroImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GoldImage)).BeginInit();
@@ -261,6 +271,7 @@
             this.PhysicalAttackButton.Name = "PhysicalAttackButton";
             this.PhysicalAttackButton.Size = new System.Drawing.Size(64, 57);
             this.PhysicalAttackButton.TabIndex = 28;
+            this.toolTip.SetToolTip(this.PhysicalAttackButton, "Strike a physical attack. Blocked by enemy\'s armor.");
             this.PhysicalAttackButton.UseVisualStyleBackColor = true;
             this.PhysicalAttackButton.Click += new System.EventHandler(this.PhysicalAttackButton_Click);
             // 
@@ -272,6 +283,7 @@
             this.MagicalAttackButton.Name = "MagicalAttackButton";
             this.MagicalAttackButton.Size = new System.Drawing.Size(64, 57);
             this.MagicalAttackButton.TabIndex = 29;
+            this.toolTip.SetToolTip(this.MagicalAttackButton, resources.GetString("MagicalAttackButton.ToolTip"));
             this.MagicalAttackButton.UseVisualStyleBackColor = true;
             this.MagicalAttackButton.Click += new System.EventHandler(this.MagicalAttackButton_Click);
             // 
@@ -283,6 +295,7 @@
             this.ShopButton.Name = "ShopButton";
             this.ShopButton.Size = new System.Drawing.Size(64, 57);
             this.ShopButton.TabIndex = 30;
+            this.toolTip.SetToolTip(this.ShopButton, "Purchase weapons from Shop");
             this.ShopButton.UseVisualStyleBackColor = true;
             this.ShopButton.Click += new System.EventHandler(this.ShopButton_Click);
             // 
@@ -306,6 +319,86 @@
             this.MyGold.Text = "0";
             this.MyGold.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // MyHealthLabel
+            // 
+            this.MyHealthLabel.BackColor = System.Drawing.Color.Transparent;
+            this.MyHealthLabel.Location = new System.Drawing.Point(50, 241);
+            this.MyHealthLabel.Name = "MyHealthLabel";
+            this.MyHealthLabel.Size = new System.Drawing.Size(41, 23);
+            this.MyHealthLabel.TabIndex = 33;
+            this.MyHealthLabel.Text = "500";
+            this.MyHealthLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // MyManaLabel
+            // 
+            this.MyManaLabel.BackColor = System.Drawing.Color.Transparent;
+            this.MyManaLabel.Location = new System.Drawing.Point(50, 280);
+            this.MyManaLabel.Name = "MyManaLabel";
+            this.MyManaLabel.Size = new System.Drawing.Size(41, 23);
+            this.MyManaLabel.TabIndex = 34;
+            this.MyManaLabel.Text = "500";
+            this.MyManaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // MyArmorLabel
+            // 
+            this.MyArmorLabel.BackColor = System.Drawing.Color.Transparent;
+            this.MyArmorLabel.Location = new System.Drawing.Point(50, 328);
+            this.MyArmorLabel.Name = "MyArmorLabel";
+            this.MyArmorLabel.Size = new System.Drawing.Size(41, 23);
+            this.MyArmorLabel.TabIndex = 35;
+            this.MyArmorLabel.Text = "500";
+            this.MyArmorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // MyDamageLabel
+            // 
+            this.MyDamageLabel.BackColor = System.Drawing.Color.Transparent;
+            this.MyDamageLabel.Location = new System.Drawing.Point(50, 372);
+            this.MyDamageLabel.Name = "MyDamageLabel";
+            this.MyDamageLabel.Size = new System.Drawing.Size(41, 23);
+            this.MyDamageLabel.TabIndex = 36;
+            this.MyDamageLabel.Text = "500";
+            this.MyDamageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // EnemyHealthLabel
+            // 
+            this.EnemyHealthLabel.BackColor = System.Drawing.Color.Transparent;
+            this.EnemyHealthLabel.Location = new System.Drawing.Point(894, 241);
+            this.EnemyHealthLabel.Name = "EnemyHealthLabel";
+            this.EnemyHealthLabel.Size = new System.Drawing.Size(41, 23);
+            this.EnemyHealthLabel.TabIndex = 37;
+            this.EnemyHealthLabel.Text = "500";
+            this.EnemyHealthLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // EnemyManaLabel
+            // 
+            this.EnemyManaLabel.BackColor = System.Drawing.Color.Transparent;
+            this.EnemyManaLabel.Location = new System.Drawing.Point(894, 280);
+            this.EnemyManaLabel.Name = "EnemyManaLabel";
+            this.EnemyManaLabel.Size = new System.Drawing.Size(41, 23);
+            this.EnemyManaLabel.TabIndex = 38;
+            this.EnemyManaLabel.Text = "500";
+            this.EnemyManaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // EnemyArmorLabel
+            // 
+            this.EnemyArmorLabel.BackColor = System.Drawing.Color.Transparent;
+            this.EnemyArmorLabel.Location = new System.Drawing.Point(894, 328);
+            this.EnemyArmorLabel.Name = "EnemyArmorLabel";
+            this.EnemyArmorLabel.Size = new System.Drawing.Size(41, 23);
+            this.EnemyArmorLabel.TabIndex = 39;
+            this.EnemyArmorLabel.Text = "500";
+            this.EnemyArmorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // EnemyDamageLabel
+            // 
+            this.EnemyDamageLabel.BackColor = System.Drawing.Color.Transparent;
+            this.EnemyDamageLabel.Location = new System.Drawing.Point(894, 372);
+            this.EnemyDamageLabel.Name = "EnemyDamageLabel";
+            this.EnemyDamageLabel.Size = new System.Drawing.Size(41, 23);
+            this.EnemyDamageLabel.TabIndex = 40;
+            this.EnemyDamageLabel.Text = "500";
+            this.EnemyDamageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // GameScreen
             // 
             this.AllowDrop = true;
@@ -313,6 +406,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(964, 672);
+            this.Controls.Add(this.EnemyDamageLabel);
+            this.Controls.Add(this.EnemyArmorLabel);
+            this.Controls.Add(this.EnemyManaLabel);
+            this.Controls.Add(this.EnemyHealthLabel);
+            this.Controls.Add(this.MyDamageLabel);
+            this.Controls.Add(this.MyArmorLabel);
+            this.Controls.Add(this.MyManaLabel);
+            this.Controls.Add(this.MyHealthLabel);
             this.Controls.Add(this.MyGold);
             this.Controls.Add(this.GoldImage);
             this.Controls.Add(this.ShopButton);
@@ -380,5 +481,14 @@
         private System.Windows.Forms.Button ShopButton;
         private System.Windows.Forms.PictureBox GoldImage;
         private System.Windows.Forms.Label MyGold;
+        private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.Label MyHealthLabel;
+        private System.Windows.Forms.Label MyManaLabel;
+        private System.Windows.Forms.Label MyArmorLabel;
+        private System.Windows.Forms.Label MyDamageLabel;
+        private System.Windows.Forms.Label EnemyHealthLabel;
+        private System.Windows.Forms.Label EnemyManaLabel;
+        private System.Windows.Forms.Label EnemyArmorLabel;
+        private System.Windows.Forms.Label EnemyDamageLabel;
     }
 }

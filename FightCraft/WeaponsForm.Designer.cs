@@ -41,13 +41,14 @@
             this.BuyArmorBasicButton = new System.Windows.Forms.Button();
             this.BuyArmorUltraButton = new System.Windows.Forms.Button();
             this.ShopToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.BackButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GoldImage)).BeginInit();
             this.SuspendLayout();
             // 
             // MyGold
             // 
             this.MyGold.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MyGold.Location = new System.Drawing.Point(92, 21);
+            this.MyGold.Location = new System.Drawing.Point(258, 37);
             this.MyGold.Name = "MyGold";
             this.MyGold.Size = new System.Drawing.Size(83, 26);
             this.MyGold.TabIndex = 34;
@@ -58,7 +59,7 @@
             // 
             this.GoldImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GoldImage.BackgroundImage")));
             this.GoldImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.GoldImage.Location = new System.Drawing.Point(52, 21);
+            this.GoldImage.Location = new System.Drawing.Point(218, 37);
             this.GoldImage.Name = "GoldImage";
             this.GoldImage.Size = new System.Drawing.Size(34, 26);
             this.GoldImage.TabIndex = 33;
@@ -160,11 +161,23 @@
             this.BuyArmorUltraButton.UseVisualStyleBackColor = true;
             this.BuyArmorUltraButton.Click += new System.EventHandler(this.BuyArmorUltraButton_Click);
             // 
+            // BackButton
+            // 
+            this.BackButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackButton.BackgroundImage")));
+            this.BackButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackButton.Location = new System.Drawing.Point(12, 12);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(38, 38);
+            this.BackButton.TabIndex = 48;
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.button1_Click);
+            // 
             // WeaponsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(931, 436);
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.BuyArmorUltraButton);
             this.Controls.Add(this.BuyArmorBasicButton);
             this.Controls.Add(this.BuyWeaponUltraButton);
@@ -200,5 +213,6 @@
         private System.Windows.Forms.Button BuyArmorBasicButton;
         private System.Windows.Forms.Button BuyArmorUltraButton;
         private System.Windows.Forms.ToolTip ShopToolTip;
+        private System.Windows.Forms.Button BackButton;
     }
 }
