@@ -35,9 +35,6 @@ namespace FightCraft
             this.Hide();
         }
 
-
-
-
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);

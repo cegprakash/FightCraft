@@ -284,7 +284,7 @@
             this.ShopButton.Size = new System.Drawing.Size(64, 57);
             this.ShopButton.TabIndex = 30;
             this.ShopButton.UseVisualStyleBackColor = true;
-            this.ShopButton.Visible = false;
+            this.ShopButton.Click += new System.EventHandler(this.ShopButton_Click);
             // 
             // GoldImage
             // 

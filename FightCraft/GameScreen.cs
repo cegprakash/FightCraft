@@ -16,7 +16,7 @@ namespace FightCraft
     {
         int level;
         bool isMyTurn;
-        Hero myHero, enemyHero;
+        static Hero myHero, enemyHero;
         GameConstants constants = new GameConstants();
         Random random = new Random();
         public GameScreen()
@@ -48,7 +48,7 @@ namespace FightCraft
 
             MyLevelLabel.Text = "Level " + myHero.level;
             EnemyLevelLabel.Text = "Level" + enemyHero.level;
-            MyGold.Text = myHero.gold.ToString();
+            updateGold();
             try {
                 MyHeroImage.BackgroundImage = Image.FromFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),myHero.imagePath));
                 EnemyHeroImage.BackgroundImage = Image.FromFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), enemyHero.imagePath));
@@ -59,6 +59,10 @@ namespace FightCraft
             }
             updateBars();
             initMyTurn();
+        }
+        public void updateGold()
+        {
+            MyGold.Text = myHero.gold.ToString();
         }
 
         public void updateBars()
@@ -182,9 +186,53 @@ namespace FightCraft
 
         }
 
+
+        void shopFormClosed(object sender, EventArgs e)
+        {
+            this.Show();
+            this.Activate();
+            this.BringToFront();
+            updateGold();
+            updateBars();
+        }
+
+        private void ShopButton_Click(object sender, EventArgs e)
+        {
+            Form shopForm = new WeaponsForm();
+            shopForm.Activate();
+            shopForm.Show();
+            shopForm.FormClosed += new FormClosedEventHandler(shopFormClosed);
+            shopForm.BringToFront();
+            this.Hide();
+        }
+
         public bool isGameWon()
         {
             return isEnemyDefeated() && enemyHero.level == 3;
+        }
+
+        public static int getMyGold()
+        {
+            return myHero.gold;
+        }
+
+        public static void reduceGold(int cost)
+        {
+            myHero.gold -= cost;
+        }
+        public static void increaseHealth(double health)
+        {
+            myHero.currentState.health = Math.Min(myHero.attributes.health, myHero.currentState.health + health);
+        }
+        
+        public static void increaseDamage(double damage)
+        {
+            myHero.currentState.damagePerHit = Math.Min(myHero.attributes.damagePerHit, myHero.currentState.damagePerHit + damage);
+        }
+
+        public static void increaseArmor(double armor)
+        {
+            myHero.currentState.armor = Math.Min(myHero.attributes.armor, myHero.currentState.armor + armor);
         }
     }
 }

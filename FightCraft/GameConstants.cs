@@ -9,6 +9,16 @@ namespace FightCraft
     public class GameConstants
     {
         public const double manaCost = 100;
+        public const double healHealth = 50;
+        public const int healCost = 2;
+        public const double armorBasic = 2;
+        public const double armorUltimate = 8;
+        public const int armorBasicCost = 3;
+        public const int armorUltimateCost = 8;
+        public const double damageBasic = 6;
+        public const double damageUltimate = 15;
+        public const int damageBasicCost = 4;
+        public const int damageUltraCost = 8;
 
         public Hero MyHero
         {

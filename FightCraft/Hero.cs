@@ -11,7 +11,7 @@ namespace FightCraft
         public string imagePath;
         public Attributes attributes;
         public Attributes currentState;
-        public double gold;
+        public int gold;
         public int level;
         Random random = new Random();
 
@@ -42,12 +42,12 @@ namespace FightCraft
             int randomValue = random.Next() % 2;
             if(randomValue == 0)
             {
-                currentState.armor += 5;
+                currentState.armor = Math.Min(attributes.armor, currentState.armor + 5);
                 return new Tuple<double, int>(damage, 5);
             }
             else
             {
-                enemy.currentState.armor += 5;
+                enemy.currentState.armor = Math.Min(enemy.attributes.armor, enemy.currentState.armor + 5);
                 return new Tuple<double, int>(damage, -5);
             }
         }
