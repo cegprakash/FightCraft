@@ -78,9 +78,13 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.StartButton);
             this.ForeColor = System.Drawing.Color.YellowGreen;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(980, 710);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(980, 710);
             this.Name = "MenuForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fight Craft";
             this.ResumeLayout(false);
             this.PerformLayout();

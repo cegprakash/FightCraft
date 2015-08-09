@@ -29,39 +29,47 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameScreen));
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.GameConsole = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
-            this.progressBar3 = new System.Windows.Forms.ProgressBar();
-            this.progressBar4 = new System.Windows.Forms.ProgressBar();
-            this.progressBar5 = new System.Windows.Forms.ProgressBar();
-            this.progressBar6 = new System.Windows.Forms.ProgressBar();
-            this.progressBar7 = new System.Windows.Forms.ProgressBar();
-            this.progressBar8 = new System.Windows.Forms.ProgressBar();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.MyHealthBar = new System.Windows.Forms.ProgressBar();
+            this.MyManaBar = new System.Windows.Forms.ProgressBar();
+            this.MyArmorBar = new System.Windows.Forms.ProgressBar();
+            this.MyDamageBar = new System.Windows.Forms.ProgressBar();
+            this.EnemyDamageBar = new System.Windows.Forms.ProgressBar();
+            this.EnemyArmorBar = new System.Windows.Forms.ProgressBar();
+            this.EnemyManaBar = new System.Windows.Forms.ProgressBar();
+            this.EnemyHealthBar = new System.Windows.Forms.ProgressBar();
+            this.EnemyHeroImage = new System.Windows.Forms.PictureBox();
+            this.MyHeroImage = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.MyLevelLabel = new System.Windows.Forms.Label();
+            this.EnemyLevelLabel = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.PhysicalAttackButton = new System.Windows.Forms.Button();
+            this.MagicalAttackButton = new System.Windows.Forms.Button();
+            this.ShopButton = new System.Windows.Forms.Button();
+            this.GoldImage = new System.Windows.Forms.PictureBox();
+            this.MyGold = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.EnemyHeroImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyHeroImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GoldImage)).BeginInit();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // GameConsole
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 509);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(940, 151);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.GameConsole.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.GameConsole.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.GameConsole.Enabled = false;
+            this.GameConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GameConsole.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.GameConsole.Location = new System.Drawing.Point(12, 509);
+            this.GameConsole.Name = "GameConsole";
+            this.GameConsole.Size = new System.Drawing.Size(940, 151);
+            this.GameConsole.TabIndex = 0;
+            this.GameConsole.Text = "";
             // 
             // label1
             // 
@@ -74,7 +82,6 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Health";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // label2
             // 
@@ -99,7 +106,6 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "Armor";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -113,99 +119,99 @@
             this.label4.Text = "Damage";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // progressBar1
+            // MyHealthBar
             // 
-            this.progressBar1.Location = new System.Drawing.Point(87, 241);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.progressBar1.RightToLeftLayout = true;
-            this.progressBar1.Size = new System.Drawing.Size(331, 23);
-            this.progressBar1.TabIndex = 13;
-            this.progressBar1.Value = 100;
+            this.MyHealthBar.Location = new System.Drawing.Point(87, 241);
+            this.MyHealthBar.Name = "MyHealthBar";
+            this.MyHealthBar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.MyHealthBar.RightToLeftLayout = true;
+            this.MyHealthBar.Size = new System.Drawing.Size(331, 23);
+            this.MyHealthBar.TabIndex = 13;
+            this.MyHealthBar.Value = 100;
             // 
-            // progressBar2
+            // MyManaBar
             // 
-            this.progressBar2.ForeColor = System.Drawing.Color.Blue;
-            this.progressBar2.Location = new System.Drawing.Point(87, 280);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.progressBar2.RightToLeftLayout = true;
-            this.progressBar2.Size = new System.Drawing.Size(331, 23);
-            this.progressBar2.TabIndex = 14;
-            this.progressBar2.Value = 100;
+            this.MyManaBar.ForeColor = System.Drawing.Color.Blue;
+            this.MyManaBar.Location = new System.Drawing.Point(87, 280);
+            this.MyManaBar.Name = "MyManaBar";
+            this.MyManaBar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.MyManaBar.RightToLeftLayout = true;
+            this.MyManaBar.Size = new System.Drawing.Size(331, 23);
+            this.MyManaBar.TabIndex = 14;
+            this.MyManaBar.Value = 100;
             // 
-            // progressBar3
+            // MyArmorBar
             // 
-            this.progressBar3.Location = new System.Drawing.Point(87, 328);
-            this.progressBar3.Name = "progressBar3";
-            this.progressBar3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.progressBar3.RightToLeftLayout = true;
-            this.progressBar3.Size = new System.Drawing.Size(331, 23);
-            this.progressBar3.TabIndex = 15;
-            this.progressBar3.Value = 20;
+            this.MyArmorBar.Location = new System.Drawing.Point(87, 328);
+            this.MyArmorBar.Name = "MyArmorBar";
+            this.MyArmorBar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.MyArmorBar.RightToLeftLayout = true;
+            this.MyArmorBar.Size = new System.Drawing.Size(331, 23);
+            this.MyArmorBar.TabIndex = 15;
+            this.MyArmorBar.Value = 20;
             // 
-            // progressBar4
+            // MyDamageBar
             // 
-            this.progressBar4.Location = new System.Drawing.Point(87, 372);
-            this.progressBar4.Name = "progressBar4";
-            this.progressBar4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.progressBar4.RightToLeftLayout = true;
-            this.progressBar4.Size = new System.Drawing.Size(331, 23);
-            this.progressBar4.TabIndex = 16;
-            this.progressBar4.Value = 30;
+            this.MyDamageBar.Location = new System.Drawing.Point(87, 372);
+            this.MyDamageBar.Name = "MyDamageBar";
+            this.MyDamageBar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.MyDamageBar.RightToLeftLayout = true;
+            this.MyDamageBar.Size = new System.Drawing.Size(331, 23);
+            this.MyDamageBar.TabIndex = 16;
+            this.MyDamageBar.Value = 30;
             // 
-            // progressBar5
+            // EnemyDamageBar
             // 
-            this.progressBar5.Location = new System.Drawing.Point(566, 372);
-            this.progressBar5.Name = "progressBar5";
-            this.progressBar5.Size = new System.Drawing.Size(331, 23);
-            this.progressBar5.TabIndex = 20;
-            this.progressBar5.Value = 30;
+            this.EnemyDamageBar.Location = new System.Drawing.Point(566, 372);
+            this.EnemyDamageBar.Name = "EnemyDamageBar";
+            this.EnemyDamageBar.Size = new System.Drawing.Size(331, 23);
+            this.EnemyDamageBar.TabIndex = 20;
+            this.EnemyDamageBar.Value = 30;
             // 
-            // progressBar6
+            // EnemyArmorBar
             // 
-            this.progressBar6.Location = new System.Drawing.Point(566, 328);
-            this.progressBar6.Name = "progressBar6";
-            this.progressBar6.Size = new System.Drawing.Size(331, 23);
-            this.progressBar6.TabIndex = 19;
-            this.progressBar6.Value = 20;
-            this.progressBar6.Click += new System.EventHandler(this.progressBar6_Click);
+            this.EnemyArmorBar.Location = new System.Drawing.Point(566, 328);
+            this.EnemyArmorBar.Name = "EnemyArmorBar";
+            this.EnemyArmorBar.Size = new System.Drawing.Size(331, 23);
+            this.EnemyArmorBar.TabIndex = 19;
+            this.EnemyArmorBar.Value = 20;
             // 
-            // progressBar7
+            // EnemyManaBar
             // 
-            this.progressBar7.ForeColor = System.Drawing.Color.Blue;
-            this.progressBar7.Location = new System.Drawing.Point(566, 280);
-            this.progressBar7.Name = "progressBar7";
-            this.progressBar7.Size = new System.Drawing.Size(331, 23);
-            this.progressBar7.TabIndex = 18;
-            this.progressBar7.Value = 100;
+            this.EnemyManaBar.ForeColor = System.Drawing.Color.Blue;
+            this.EnemyManaBar.Location = new System.Drawing.Point(566, 280);
+            this.EnemyManaBar.Name = "EnemyManaBar";
+            this.EnemyManaBar.Size = new System.Drawing.Size(331, 23);
+            this.EnemyManaBar.TabIndex = 18;
+            this.EnemyManaBar.Value = 100;
             // 
-            // progressBar8
+            // EnemyHealthBar
             // 
-            this.progressBar8.Location = new System.Drawing.Point(566, 241);
-            this.progressBar8.Name = "progressBar8";
-            this.progressBar8.Size = new System.Drawing.Size(331, 23);
-            this.progressBar8.TabIndex = 17;
-            this.progressBar8.Value = 100;
+            this.EnemyHealthBar.Location = new System.Drawing.Point(566, 241);
+            this.EnemyHealthBar.Name = "EnemyHealthBar";
+            this.EnemyHealthBar.Size = new System.Drawing.Size(331, 23);
+            this.EnemyHealthBar.TabIndex = 17;
+            this.EnemyHealthBar.Value = 100;
             // 
-            // pictureBox1
+            // EnemyHeroImage
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(566, 98);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
+            this.EnemyHeroImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EnemyHeroImage.Location = new System.Drawing.Point(566, 98);
+            this.EnemyHeroImage.Name = "EnemyHeroImage";
+            this.EnemyHeroImage.Size = new System.Drawing.Size(60, 60);
+            this.EnemyHeroImage.TabIndex = 21;
+            this.EnemyHeroImage.TabStop = false;
             // 
-            // pictureBox3
+            // MyHeroImage
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.ImageLocation = "";
-            this.pictureBox3.Location = new System.Drawing.Point(87, 98);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 23;
-            this.pictureBox3.TabStop = false;
+            this.MyHeroImage.Image = ((System.Drawing.Image)(resources.GetObject("MyHeroImage.Image")));
+            this.MyHeroImage.ImageLocation = "";
+            this.MyHeroImage.Location = new System.Drawing.Point(87, 98);
+            this.MyHeroImage.Name = "MyHeroImage";
+            this.MyHeroImage.Size = new System.Drawing.Size(60, 60);
+            this.MyHeroImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.MyHeroImage.TabIndex = 23;
+            this.MyHeroImage.TabStop = false;
             // 
             // label5
             // 
@@ -218,23 +224,23 @@
             this.label5.TabIndex = 24;
             this.label5.Text = "YOU";
             // 
-            // label6
+            // MyLevelLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(192, 145);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 13);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "Level 1";
+            this.MyLevelLabel.AutoSize = true;
+            this.MyLevelLabel.Location = new System.Drawing.Point(192, 145);
+            this.MyLevelLabel.Name = "MyLevelLabel";
+            this.MyLevelLabel.Size = new System.Drawing.Size(42, 13);
+            this.MyLevelLabel.TabIndex = 25;
+            this.MyLevelLabel.Text = "Level 1";
             // 
-            // label7
+            // EnemyLevelLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(674, 145);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(42, 13);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "Level 1";
+            this.EnemyLevelLabel.AutoSize = true;
+            this.EnemyLevelLabel.Location = new System.Drawing.Point(674, 145);
+            this.EnemyLevelLabel.Name = "EnemyLevelLabel";
+            this.EnemyLevelLabel.Size = new System.Drawing.Size(42, 13);
+            this.EnemyLevelLabel.TabIndex = 27;
+            this.EnemyLevelLabel.Text = "Level 1";
             // 
             // label8
             // 
@@ -247,70 +253,102 @@
             this.label8.TabIndex = 26;
             this.label8.Text = "ENEMY";
             // 
-            // button1
+            // PhysicalAttackButton
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(298, 436);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 57);
-            this.button1.TabIndex = 28;
-            this.button1.UseVisualStyleBackColor = true;
+            this.PhysicalAttackButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PhysicalAttackButton.BackgroundImage")));
+            this.PhysicalAttackButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PhysicalAttackButton.Location = new System.Drawing.Point(298, 436);
+            this.PhysicalAttackButton.Name = "PhysicalAttackButton";
+            this.PhysicalAttackButton.Size = new System.Drawing.Size(64, 57);
+            this.PhysicalAttackButton.TabIndex = 28;
+            this.PhysicalAttackButton.UseVisualStyleBackColor = true;
+            this.PhysicalAttackButton.Click += new System.EventHandler(this.PhysicalAttackButton_Click);
             // 
-            // button2
+            // MagicalAttackButton
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(416, 436);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(64, 57);
-            this.button2.TabIndex = 29;
-            this.button2.UseVisualStyleBackColor = true;
+            this.MagicalAttackButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MagicalAttackButton.BackgroundImage")));
+            this.MagicalAttackButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MagicalAttackButton.Location = new System.Drawing.Point(416, 436);
+            this.MagicalAttackButton.Name = "MagicalAttackButton";
+            this.MagicalAttackButton.Size = new System.Drawing.Size(64, 57);
+            this.MagicalAttackButton.TabIndex = 29;
+            this.MagicalAttackButton.UseVisualStyleBackColor = true;
+            this.MagicalAttackButton.Click += new System.EventHandler(this.MagicalAttackButton_Click);
             // 
-            // button3
+            // ShopButton
             // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(689, 436);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(64, 57);
-            this.button3.TabIndex = 30;
-            this.button3.UseVisualStyleBackColor = true;
+            this.ShopButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ShopButton.BackgroundImage")));
+            this.ShopButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ShopButton.Location = new System.Drawing.Point(689, 436);
+            this.ShopButton.Name = "ShopButton";
+            this.ShopButton.Size = new System.Drawing.Size(64, 57);
+            this.ShopButton.TabIndex = 30;
+            this.ShopButton.UseVisualStyleBackColor = true;
+            this.ShopButton.Visible = false;
+            // 
+            // GoldImage
+            // 
+            this.GoldImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GoldImage.BackgroundImage")));
+            this.GoldImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GoldImage.Location = new System.Drawing.Point(87, 12);
+            this.GoldImage.Name = "GoldImage";
+            this.GoldImage.Size = new System.Drawing.Size(34, 26);
+            this.GoldImage.TabIndex = 31;
+            this.GoldImage.TabStop = false;
+            // 
+            // MyGold
+            // 
+            this.MyGold.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MyGold.Location = new System.Drawing.Point(127, 12);
+            this.MyGold.Name = "MyGold";
+            this.MyGold.Size = new System.Drawing.Size(83, 26);
+            this.MyGold.TabIndex = 32;
+            this.MyGold.Text = "0";
+            this.MyGold.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // GameScreen
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(964, 672);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.MyGold);
+            this.Controls.Add(this.GoldImage);
+            this.Controls.Add(this.ShopButton);
+            this.Controls.Add(this.MagicalAttackButton);
+            this.Controls.Add(this.PhysicalAttackButton);
+            this.Controls.Add(this.EnemyLevelLabel);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.MyLevelLabel);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.progressBar5);
-            this.Controls.Add(this.progressBar6);
-            this.Controls.Add(this.progressBar7);
-            this.Controls.Add(this.progressBar8);
-            this.Controls.Add(this.progressBar4);
-            this.Controls.Add(this.progressBar3);
-            this.Controls.Add(this.progressBar2);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.MyHeroImage);
+            this.Controls.Add(this.EnemyHeroImage);
+            this.Controls.Add(this.EnemyDamageBar);
+            this.Controls.Add(this.EnemyArmorBar);
+            this.Controls.Add(this.EnemyManaBar);
+            this.Controls.Add(this.EnemyHealthBar);
+            this.Controls.Add(this.MyDamageBar);
+            this.Controls.Add(this.MyArmorBar);
+            this.Controls.Add(this.MyManaBar);
+            this.Controls.Add(this.MyHealthBar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.GameConsole);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(980, 710);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(980, 710);
             this.Name = "GameScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fight Craft";
-            this.Load += new System.EventHandler(this.GameScreen_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EnemyHeroImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyHeroImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GoldImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,27 +356,29 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox GameConsole;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.ProgressBar progressBar2;
-        private System.Windows.Forms.ProgressBar progressBar3;
-        private System.Windows.Forms.ProgressBar progressBar4;
-        private System.Windows.Forms.ProgressBar progressBar5;
-        private System.Windows.Forms.ProgressBar progressBar6;
-        private System.Windows.Forms.ProgressBar progressBar7;
-        private System.Windows.Forms.ProgressBar progressBar8;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.ProgressBar MyHealthBar;
+        private System.Windows.Forms.ProgressBar MyManaBar;
+        private System.Windows.Forms.ProgressBar MyArmorBar;
+        private System.Windows.Forms.ProgressBar MyDamageBar;
+        private System.Windows.Forms.ProgressBar EnemyDamageBar;
+        private System.Windows.Forms.ProgressBar EnemyArmorBar;
+        private System.Windows.Forms.ProgressBar EnemyManaBar;
+        private System.Windows.Forms.ProgressBar EnemyHealthBar;
+        private System.Windows.Forms.PictureBox EnemyHeroImage;
+        private System.Windows.Forms.PictureBox MyHeroImage;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label MyLevelLabel;
+        private System.Windows.Forms.Label EnemyLevelLabel;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button PhysicalAttackButton;
+        private System.Windows.Forms.Button MagicalAttackButton;
+        private System.Windows.Forms.Button ShopButton;
+        private System.Windows.Forms.PictureBox GoldImage;
+        private System.Windows.Forms.Label MyGold;
     }
 }
