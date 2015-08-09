@@ -1,0 +1,10 @@
+C:\Users\dpraka\Documents\Visual Studio 2015\Projects\FightCraft\FightCraft\bin\Release\FightCraft.exe.config
+C:\Users\dpraka\Documents\Visual Studio 2015\Projects\FightCraft\FightCraft\bin\Release\FightCraft.exe
+C:\Users\dpraka\Documents\Visual Studio 2015\Projects\FightCraft\FightCraft\bin\Release\FightCraft.pdb
+C:\Users\dpraka\Documents\Visual Studio 2015\Projects\FightCraft\FightCraft\obj\Release\FightCraft.MenuForm.resources
+C:\Users\dpraka\Documents\Visual Studio 2015\Projects\FightCraft\FightCraft\obj\Release\FightCraft.GameScreen.resources
+C:\Users\dpraka\Documents\Visual Studio 2015\Projects\FightCraft\FightCraft\obj\Release\FightCraft.Properties.Resources.resources
+C:\Users\dpraka\Documents\Visual Studio 2015\Projects\FightCraft\FightCraft\obj\Release\FightCraft.WeaponsForm.resources
+C:\Users\dpraka\Documents\Visual Studio 2015\Projects\FightCraft\FightCraft\obj\Release\FightCraft.csproj.GenerateResource.Cache
+C:\Users\dpraka\Documents\Visual Studio 2015\Projects\FightCraft\FightCraft\obj\Release\FightCraft.exe
+C:\Users\dpraka\Documents\Visual Studio 2015\Projects\FightCraft\FightCraft\obj\Release\FightCraft.pdb

@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Media;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,8 +18,15 @@ namespace FightCraft
         public MenuForm()
         {
             InitializeComponent();
- 
-    }
+            try {
+                SoundPlayer bgm = new SoundPlayer(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Resources\\sakura.wav"));
+                bgm.PlayLooping();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Audio file missing. Copy the Resources folder to the location of the .exe file : " +e.Message);
+            }
+        }
         void gameScreenClosed(object sender, EventArgs e)
         {
             this.Show();
