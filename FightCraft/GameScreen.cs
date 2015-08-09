@@ -73,14 +73,14 @@ namespace FightCraft
             EnemyArmorBar.Value = (int)Math.Floor((enemyHero.currentState.armor / enemyHero.attributes.armor) * 100);
             EnemyDamageBar.Value = (int)Math.Floor((enemyHero.currentState.damagePerHit / enemyHero.attributes.damagePerHit) * 100);
             EnemyManaBar.Value = (int)Math.Floor((enemyHero.currentState.mana / enemyHero.attributes.mana) * 100);
-            MyHealthLabel.Text = MyHealthBar.Value.ToString();
-            MyArmorLabel.Text = MyArmorBar.Value.ToString();
-            MyDamageLabel.Text = MyDamageBar.Value.ToString();
-            MyManaLabel.Text = MyManaBar.Value.ToString();
-            EnemyHealthLabel.Text = EnemyHealthBar.Value.ToString();
-            EnemyArmorLabel.Text = EnemyArmorBar.Value.ToString();
-            EnemyDamageLabel.Text = EnemyDamageBar.Value.ToString();
-            EnemyManaLabel.Text = EnemyManaBar.Value.ToString();
+            MyHealthLabel.Text = ((int)myHero.currentState.health).ToString();
+            MyArmorLabel.Text = ((int)myHero.currentState.armor).ToString() + "%";
+            MyDamageLabel.Text = ((int)myHero.currentState.damagePerHit).ToString();
+            MyManaLabel.Text = ((int)myHero.currentState.mana).ToString();
+            EnemyHealthLabel.Text = ((int)enemyHero.currentState.health).ToString();
+            EnemyArmorLabel.Text = ((int)enemyHero.currentState.armor).ToString()+"%";
+            EnemyDamageLabel.Text = ((int)enemyHero.currentState.damagePerHit).ToString();
+            EnemyManaLabel.Text = ((int)enemyHero.currentState.mana).ToString();
         }
 
         public void initMyTurn()
